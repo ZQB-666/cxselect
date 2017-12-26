@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script src="js/jquery-3.2.1.min.js"></script>-->
+    <script src="js/jquery.cxselect.js"></script>
+</head>
+<body>
+    <!-- 
+select 必须放在元素 id="element_id" 的内部，不限层级 
+select 的 class 任意取值，也可以附加多个 class，如 class="province otherclass"，在调用时只需要输入其中一个即可，但是不能重复 
+如需设置 select 默认值，加上 data-value 属性，例：<select class="province" data-value="浙江省"></select> 
+--> 
+<div id="element_id"> 
+  <select class="province"></select> 
+  <select class="city"></select> 
+  <select class="area"></select> 
+</div> 
+
+</body>
+<script>
+    // selects 为数组形式，请注意顺序 
+$('#element_id').cxSelect({ 
+  url: 'cityData.min.json'   // 提示：如果服务器不支持 .json 类型文件，请将文件改为 .js 文件 
+  selects: ['province', 'city', 'area'], 
+  nodata: 'none' 
+}); 
+</script>
+</html>
