@@ -3,12 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>cxSelect 插件联动下拉菜单</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.cxselect.js"></script>
+    <style>
+        .inwrap{
+            width: 500px;
+            margin: 0 auto;
+        }
+    
+    </style>
 </head>
 
 <body>
+   <div class="inwrap">
+      <h1>jQuery cxSelect 联动下拉菜单</h1>
+      <h2>国内省市区联动</h2>
     <div class="example">
         <fieldset>
             <legend>默认</legend>
@@ -51,6 +61,7 @@
                 </dl>
             </div>
         </fieldset>
+    </div>
     </div>
     <script>
         $.cxSelect.defaults.url = 'js/cityData.min.json';
